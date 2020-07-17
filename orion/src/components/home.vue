@@ -239,13 +239,15 @@ export default {
       position: relative;
       list-style: none ;
       display: block;
+      padding: 2% 0;
       a {
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
         display: inline-block;
-        font-size: 40px;
-        font-weight: 700;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 1px;
 
       }
     }
@@ -291,6 +293,7 @@ export default {
     background: url('../assets/img/menu.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 80%;
     /*color: white;*/
     position: fixed;
     top: 20px;
