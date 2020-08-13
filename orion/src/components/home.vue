@@ -1,15 +1,15 @@
-<template>
+ <template>
   <div class="container">
 
     <div :class="{'toggle-bar2' : visible, 'toggle-bar' : !visible}" v-on:click="seen = !seen, visible = !visible"></div>
     <div class="menu" v-if="seen">
       <div style="text-align: center; margin-right:15px; width: 30%;">
         <img src="../assets/img/astro.svg" alt="">
-        <p style="font-size: 25px; color: #000; font-weight: 800; margin: 0; letter-spacing: 2px">The Launch Pad</p>
+        <p style="font-size: 25px; color: #000; font-weight: 600; margin: 0; letter-spacing: 2px">The Launch Pad</p>
       </div>
      <ul>
        <li class="system">STAR SYSTEM</li>
-       <li><a href="">Rigel</a></li>
+       <li><router-link to="/rigel">Rigel</router-link></li>
        <li><a href="">GAMMA ANDROMEDAE</a></li>
        <li><a href="">Canis Majoris</a></li>
        <li><a href="">Alpha Centuari</a></li>
@@ -27,7 +27,7 @@
     </section>
 
     <section class="halo">
-      <a class="hvr-sweep-to-left" href="#">WARP DRIVE</a>
+    <router-link class="hvr-sweep-to-left" to="/join" >WARP DRIVE </router-link>
     </section>
     
     <footer class="foot">
@@ -49,6 +49,8 @@
 
 <script>
 
+
+
 export default {
   name: 'home',
 
@@ -68,7 +70,15 @@ export default {
 
 <style scoped lang="scss">
 
+  @import '../../public/style.css';
+
+  * {
+    font-family: 'TT Norms Pro', 'sans-serif';
+  }
+
   .container {
+    background-image: url('../assets/img/back-drop.svg');
+    background-size: cover;
     color: #fff;
     background-color:#000;
     height: calc(100vh);
@@ -88,7 +98,7 @@ export default {
   padding-top: 8%;
       h6 {
         font-size: 25px;
-        font-weight: 100;
+        font-weight: 200;
         margin: 0;
         letter-spacing: 2px;
       }
@@ -96,7 +106,7 @@ export default {
         font-size: 150px;
         margin: 0;
         margin-top: -50px;
-        font-weight: 500;
+        font-weight: 400;
       }
     }
 
@@ -109,7 +119,7 @@ export default {
         border: 2px solid #7842F0;
         border-radius: 35px;
         padding: 1.5% 4%;
-        font-weight: 700;
+        font-weight: 500;
       }
       a:hover {
         /*background-color: #7842F0;*/
@@ -246,7 +256,7 @@ export default {
         text-transform: uppercase;
         display: inline-block;
         font-size: 30px;
-        font-weight: 600;
+        font-weight: 400;
         letter-spacing: 1px;
 
       }
@@ -311,7 +321,7 @@ export default {
     font-size: 30px;
     border-bottom: 1px solid black;
     max-width: 12ch;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px;
   }
 
